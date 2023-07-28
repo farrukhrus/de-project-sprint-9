@@ -2,9 +2,10 @@ import logging
 
 from apscheduler.schedulers.background import BackgroundScheduler
 from flask import Flask
-
 from app_config import AppConfig
 from dds_loader.dds_message_processor_job import DdsMessageProcessor
+from dds_loader.repository.dds_repository import LOAD
+
 
 app = Flask(__name__)
 
@@ -20,6 +21,9 @@ if __name__ == '__main__':
     app.logger.setLevel(logging.DEBUG)
 
     proc = DdsMessageProcessor(
+        config.kafka_consumer(),
+        config.kafka_producer(),
+        LOAD(config.pg_warehouse_db()),
         app.logger
     )
 

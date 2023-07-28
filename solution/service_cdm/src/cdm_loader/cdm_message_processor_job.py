@@ -2,8 +2,7 @@ from datetime import datetime
 from logging import Logger
 
 from lib.kafka_connect import KafkaConsumer
-from cdm_loader.repository.cdm_repository import USERS, CATEGORIES
-from cdm_loader.repository.cdm_repository import LOAD
+from cdm_loader.repository.cdm_repository import USERS, CATEGORIES, LOAD
 
 
 class CdmMessageProcessor:
