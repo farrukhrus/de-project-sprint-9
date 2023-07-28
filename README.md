@@ -11,3 +11,13 @@
 	* `git commit -m 'my best commit'`
 5. Обновите репозиторий в вашем GitHub-аккаунте:
 	* `git push origin main`
+
+
+
+# CDM реджестри
+# docker build . -t cr.yandex/crp4d5uq19med6act2lm/cdm_service:v2023-07-28-r1
+# docker push cr.yandex/crp4d5uq19med6act2lm/cdm_service:v2023-07-28-r1
+
+# DDS реджестри
+# docker build . -t cr.yandex/crp4d5uq19med6act2lm/dds_service:v2023-07-28-r1
+# docker push cr.yandex/crp4d5uq19med6act2lm/dds_service:v2023-07-28-r1
